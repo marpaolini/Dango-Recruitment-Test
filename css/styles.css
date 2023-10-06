@@ -20,10 +20,11 @@
     width: 230px;
     height: 590px;
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .card h2 {
+    font-size: 20px;
     letter-spacing: -1px
 }
 
@@ -31,10 +32,17 @@
     padding-bottom: 10px;
 }
 
-.card .price-and-quantity {
+.price-and-quantity {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    width: 100%;
+}
+
+.price-and-quantity > p {
+    margin-right: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .card .quantity input[type="number"] {
@@ -46,7 +54,7 @@
 
 .card img {
     border-radius: 15px;
-    margin-top: 15px;
+    margin-top: 5px
 }
 
 
@@ -67,4 +75,26 @@ a {
     padding: 15px;
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    text-align: center;
+}
+
+/* RESPONSIVE DESIGN  */
+
+@media screen and (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+        width: 100%; 
+    }
 }

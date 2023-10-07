@@ -1,0 +1,100 @@
+.container {
+    display: grid;
+    place-items: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    border: 3px solid black;
+    padding: 25px;
+    background-color: white;
+    width: 230px;
+    height: 590px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.card h2 {
+    font-size: 20px;
+    letter-spacing: -1px
+}
+
+.card p {
+    padding-bottom: 10px;
+}
+
+.price-and-quantity {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.price-and-quantity > p {
+    margin-right: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card .quantity input[type="number"] {
+    width: 30px; 
+    padding: 5px; 
+    text-align: center;
+}
+
+
+.card img {
+    border-radius: 15px;
+    margin-top: 5px
+}
+
+
+button {
+    background-color: #e2d1df;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block; 
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: black;
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    text-align: center;
+}
+
+/* RESPONSIVE DESIGN  */
+
+@media screen and (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+        width: 100%; 
+    }
+}
